@@ -18,10 +18,6 @@ Step 3:
 
 React Router v4 provides below 3 <Router> components:
 
-<BrowserRouter>
-<HashRouter>
-<MemoryRouter>
-
-
+`<BrowserRouter> <HashRouter> <MemoryRouter>`
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-t9wnlf)
