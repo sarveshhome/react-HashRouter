@@ -36,7 +36,7 @@ export default function App() {
     //     </Route>
     //   </Routes>
     // </HashRouter>
-    <BrowserRouter>
+    <MemoryRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -45,6 +45,6 @@ export default function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </MemoryRouter>
   );
 }
