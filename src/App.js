@@ -16,16 +16,16 @@ import NoPage from './pages/NoPage';
 
 export default function App() {
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<Layout />}>
-    //       <Route index element={<Home />} />
-    //       <Route path="blogs" element={<Blogs />} />
-    //       <Route path="contact" element={<Contact />} />
-    //       <Route path="*" element={<NoPage />} />
-    //     </Route>
-    //   </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
     // <HashRouter>
     //   <Routes>
     //     <Route path="/" element={<Layout />}>
@@ -36,15 +36,15 @@ export default function App() {
     //     </Route>
     //   </Routes>
     // </HashRouter>
-    <MemoryRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </MemoryRouter>
+    // <MemoryRouter>
+    //   <Routes>
+    //     <Route path="/" element={<Layout />}>
+    //       <Route index element={<Home />} />
+    //       <Route path="blogs" element={<Blogs />} />
+    //       <Route path="contact" element={<Contact />} />
+    //       <Route path="*" element={<NoPage />} />
+    //     </Route>
+    //   </Routes>
+    // </MemoryRouter>
   );
 }
