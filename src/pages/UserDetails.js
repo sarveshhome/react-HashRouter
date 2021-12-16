@@ -21,4 +21,4 @@ function UsersDetails(props) {
   );
 }
 
-export default UsersDetails;
+export default UsersDetails ;
