@@ -14,7 +14,7 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import usersData from './Data';
-import UsersDetails from './pages/UsersDetails';
+import UsersDetails from './pages/UserDetails.js';
 export default function App() {
   const [data, setData] = React.useState('data');
 
