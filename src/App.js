@@ -13,9 +13,8 @@ import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
-import UserDetails from './pages/UserDetails';
 import usersData from './Data';
-
+import UsersDetails from './pages/UsersDetails';
 export default function App() {
   const [data, setData] = React.useState('data');
 
@@ -29,7 +28,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="/user/:id" element={<UsersDetails data={users} />} />
+          <Route path="UsersDetails" element={<UsersDetails />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
