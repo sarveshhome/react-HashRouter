@@ -28,7 +28,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="UsersDetails" element={<UsersDetails />} />
+          <Route path="UsersDetails" element={<UsersDetails data={data} />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
