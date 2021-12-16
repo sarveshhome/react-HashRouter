@@ -13,12 +13,13 @@ import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
-import usersData from './Data';
+import usersData from './Data.js';
 import UsersDetails from './pages/UserDetails.js';
 export default function App() {
   const [data, setData] = React.useState('data');
 
   React.useEffect(() => {
+    console.log(JSON.stringify(usersData));
     setData(usersData);
   }, []);
   return (
