@@ -14,14 +14,15 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import usersData from './Data.js';
-import UsersDetails from './pages/UserDetails.js';
+import UsersDetails from './pages/UsersDetails.js';
+import User from './pages/Users.js';
 export default function App() {
   const [data, setData] = React.useState('data');
 
   React.useEffect(() => {
-    console.log(JSON.stringify(usersData));
     setData(usersData);
   }, []);
+  const ids = 12;
   return (
     <BrowserRouter>
       <Routes>
@@ -29,7 +30,11 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="UsersDetails" element={<UsersDetails data={data} />} />
+          <Route path="Users" element={<User data={data} />} />
+          <Route
+            path="UsersDetails/:id"
+            element={<UsersDetails data={data} />}
+          />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
