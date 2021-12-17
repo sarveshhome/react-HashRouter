@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-const UsersDetails = ({ match, location }) => {
+import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
+const UsersDetails = ({ props, match, location }) => {
+  console.log('i want to id find ' + JSON.stringify(props));
   return (
     <div>
       <h1>React Dynamic Routing</h1>
@@ -25,6 +26,11 @@ const UsersDetails = ({ match, location }) => {
       {/* <h3>This is current user id: {data.id}</h3> */}
     </div>
   );
+};
+
+const usePathname = () => {
+  const location = useLocation();
+  return location.pathname;
 };
 
 export default UsersDetails;
