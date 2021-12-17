@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
-const UsersDetails = ({ props, match, location }) => {
-  console.log('i want to id find ' + JSON.stringify(props));
+const UsersDetails = (props) => {
+  const locations = useLocation();
+  console.log(locations);
+  console.log(locations.pathname.split('/')[2]);
+  const id = locations.pathname.split('/')[2];
+  console.log(JSON.stringify(props.data));
+  const [data, setData] = useState(props.data);
   return (
-    <div>
-      <h1>React Dynamic Routing</h1>
-      <p>
-        <strong>Match Props: </strong>
-        <code>{JSON.stringify(match, null, 2)}</code>
-      </p>
-      <p>
-        <strong>Location Props: </strong>
-        <code>{JSON.stringify(location, null, 2)}</code>
-      </p>
+    <>
       <ul>
-        {/* {data.filter((item) => (
+        {data.map((item, index) => (
           <div>
             <li>
-              <p>{item.name}</p>
+              <>{item.id}</> | <>{item.name}</> | <>{item.email}</>
             </li>
           </div>
-        ))} */}
+        ))}
       </ul>
-      {/* <h3>This is current user id: {data.id}</h3> */}
-    </div>
+    </>
   );
 };
 

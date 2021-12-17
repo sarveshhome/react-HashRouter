@@ -9,10 +9,10 @@ const Users = (props) => {
     <div>
       <h1>React Dynamic Routing</h1>
       <ul>
-        {data.map((item) => (
+        {data.map((item, index) => (
           <div>
             <li>
-              <Link to={'/UsersDetails/' + item.id}>{item.name}</Link>
+              <Link to={`/UsersDetails/${item.id}`}>{item.name}</Link>
             </li>
           </div>
         ))}

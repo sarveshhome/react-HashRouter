@@ -31,7 +31,10 @@ export default function App() {
           <Route exact path="blogs" element={<Blogs />} />
           <Route exact path="contact" element={<Contact />} />
           <Route exact path="Users" element={<User data={data} />} />
-          <Route path="UsersDetails/:id" element={<UsersDetails />} />
+          <Route
+            path="UsersDetails/:id"
+            element={<UsersDetails data={data} />}
+          />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
