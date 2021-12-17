@@ -3,28 +3,19 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
 const UsersDetails = ({ props, match, location }) => {
   console.log('i want to id find ' + JSON.stringify(props));
+  const {
+    params: { id },
+  } = match;
   return (
-    <div>
-      <h1>React Dynamic Routing</h1>
+    <>
       <p>
-        <strong>Match Props: </strong>
-        <code>{JSON.stringify(match, null, 2)}</code>
+        <strong>User ID: </strong>
+        {id}
       </p>
       <p>
-        <strong>Location Props: </strong>
-        <code>{JSON.stringify(location, null, 2)}</code>
+        <strong>User Name: </strong>
       </p>
-      <ul>
-        {/* {data.filter((item) => (
-          <div>
-            <li>
-              <p>{item.name}</p>
-            </li>
-          </div>
-        ))} */}
-      </ul>
-      {/* <h3>This is current user id: {data.id}</h3> */}
-    </div>
+    </>
   );
 };
 
