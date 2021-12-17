@@ -8,20 +8,23 @@ const UsersDetails = (props) => {
   const id = locations.pathname.split('/')[2];
   console.log(JSON.stringify(props.data));
   const [data, setData] = useState(props.data);
-  const filterdata = data.filter((e) => {
-    return e.id == id;
-  });
+  const filterdata =
+    !data &&
+    data.filter((e) => {
+      return e.id == id;
+    });
   console.log(JSON.stringify(filterdata));
   return (
     <>
       <ul>
-        {filterdata.map((item, index) => (
-          <div>
-            <li key={index}>
-              <>{item.id}</> | <>{item.name}</> | <>{item.email}</>
-            </li>
-          </div>
-        ))}
+        {filterdata.length > 0 &&
+          filterdata.map((item, index) => (
+            <div>
+              <li key={index}>
+                <>{item.id}</> | <>{item.name}</> | <>{item.email}</>
+              </li>
+            </div>
+          ))}
       </ul>
     </>
   );
