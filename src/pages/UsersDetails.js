@@ -8,12 +8,16 @@ const UsersDetails = (props) => {
   const id = locations.pathname.split('/')[2];
   console.log(JSON.stringify(props.data));
   const [data, setData] = useState(props.data);
+  const filterdata = data.filter((e) => {
+    return e.id == id;
+  });
+  console.log(JSON.stringify(filterdata));
   return (
     <>
       <ul>
-        {data.map((item, index) => (
+        {filterdata.map((item, index) => (
           <div>
-            <li>
+            <li key={index}>
               <>{item.id}</> | <>{item.name}</> | <>{item.email}</>
             </li>
           </div>
