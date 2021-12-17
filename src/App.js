@@ -27,14 +27,11 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="Users" element={<User data={data} />} />
-          <Route
-            path="UsersDetails/:id"
-            element={<UsersDetails data={data} />}
-          />
+          <Route exact index element={<Home />} />
+          <Route exact path="blogs" element={<Blogs />} />
+          <Route exact path="contact" element={<Contact />} />
+          <Route exact path="Users" element={<User data={data} />} />
+          <Route path="UsersDetails/:id" element={<UsersDetails />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

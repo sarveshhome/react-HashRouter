@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const Users = (props) => {
-  const pathnames = props.location;
-  console.log(props.location);
-  console.log(props.match);
   const [data, setData] = useState(props.data);
   const [isfound, setIsFound] = useState(true);
   return (
