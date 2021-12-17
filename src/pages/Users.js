@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function UsersDetails(props) {
+const Users = (props) => {
+  const pathnames = props.location;
+  console.log(props.location);
+  console.log(props.match);
   const [data, setData] = useState(props.data);
   const [isfound, setIsFound] = useState(true);
   return (
@@ -11,7 +15,7 @@ function UsersDetails(props) {
         {data.map((item) => (
           <div>
             <li>
-              <Link to={'/user/' + item.id}>{item.name}</Link>
+              <Link to={'/UsersDetails/' + item.id}>{item.name}</Link>
             </li>
           </div>
         ))}
@@ -19,6 +23,6 @@ function UsersDetails(props) {
       <h3>This is current user id: {data.id}</h3>
     </div>
   );
-}
+};
 
-export default UsersDetails ;
+export default Users;
