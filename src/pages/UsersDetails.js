@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-const UsersDetails = ({ match }) => {
-  const {
-    params: { id },
-  } = match;
-  alert(id);
-  const pathnames = props.location;
-  alert(props.match.params.id);
-  const [data, setData] = useState(props.data);
-
+const UsersDetails = ({ match, location }) => {
   return (
     <div>
       <h1>React Dynamic Routing</h1>
+      <p>
+        <strong>Match Props: </strong>
+        <code>{JSON.stringify(match, null, 2)}</code>
+      </p>
+      <p>
+        <strong>Location Props: </strong>
+        <code>{JSON.stringify(location, null, 2)}</code>
+      </p>
       <ul>
         {/* {data.filter((item) => (
           <div>
