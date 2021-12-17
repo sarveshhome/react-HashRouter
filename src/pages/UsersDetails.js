@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
-const UsersDetails = ({ props, match, location }) => {
-  console.log('i want to id find ' + JSON.stringify(props));
-  const {
-    params: { id },
-  } = match;
+const UsersDetails = (props) => {
+  const locations = useLocation();
+  console.log(locations);
+  console.log(locations.pathname.split('/')[2]);
+  const id = locations.pathname.split('/')[2];
+  console.log(JSON.stringify(props.data));
+  const [data, setData] = useState(props.data);
   return (
     <>
-      <p>
-        <strong>User ID: </strong>
-        {id}
-      </p>
-      <p>
-        <strong>User Name: </strong>
-      </p>
+      <ul>
+        {data.map((item, index) => (
+          <div>
+            <li>
+              <>{item.id}</> | <>{item.name}</> | <>{item.email}</>
+            </li>
+          </div>
+        ))}
+      </ul>
     </>
   );
 };
