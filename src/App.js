@@ -20,7 +20,7 @@ import User from './pages/Users.js';
 import store from './store/index.js';
 export default function App() {
   const [data, setData] = React.useState('data');
-  store.subscribe();
+  // store.subscribe();
   React.useEffect(() => {
     setData(usersData);
   }, []);
