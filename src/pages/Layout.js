@@ -18,6 +18,9 @@ const Layout = () => {
           <li>
             <Link to="/Users">Users</Link>
           </li>
+          <li>
+            <Link to="/Redux">Redux Call</Link>
+          </li>
         </ul>
       </nav>
 
