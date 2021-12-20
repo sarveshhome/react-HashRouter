@@ -18,7 +18,7 @@ import NoPage from './pages/NoPage';
 import usersData from './Data.js';
 import UsersDetails from './pages/UsersDetails.js';
 import User from './pages/Users.js';
-import store from './store/index.js';
+import ValueStore from './pages/ReduxCall.js';
 export default function App() {
   const [data, setData] = React.useState('data');
 
@@ -33,6 +33,7 @@ export default function App() {
           <Route exact index element={<Home />} />
           <Route exact path="blogs" element={<Blogs />} />
           <Route exact path="contact" element={<Contact />} />
+          <Route path="Redux" element={<ValueStore />} />
           <Route exact path="Users" element={<User data={data} />} />
           <Route
             path="UsersDetails/:id"
