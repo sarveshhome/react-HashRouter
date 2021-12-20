@@ -20,14 +20,16 @@ React Router v4 provides below 3 <Router> components:
 
 `<BrowserRouter> <HashRouter> <MemoryRouter>`
 
-````import { createStore } from 'redux';
+```
+import { createStore } from 'redux';
 
 const reducer = (state, action) => {
 console.log('reducer called');
 return state;
 };
 
-const store = createStore(reducer, 0);```
+const store = createStore(reducer, 0);
+```
 
 createStore function take three argument
 the first argument is a function that is normally known as a **reducer** (required)
