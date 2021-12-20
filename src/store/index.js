@@ -10,3 +10,5 @@ const store = createStore(reducer, 0);
 store.subscribe(() => {
   console.log('current state', store.getState());
 });
+
+export default store;

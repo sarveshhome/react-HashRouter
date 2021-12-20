@@ -1,4 +1,5 @@
 import React from 'react';
+import { createStore } from 'redux';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter,
@@ -16,9 +17,10 @@ import NoPage from './pages/NoPage';
 import usersData from './Data.js';
 import UsersDetails from './pages/UsersDetails.js';
 import User from './pages/Users.js';
+import store from './store/index.js';
 export default function App() {
   const [data, setData] = React.useState('data');
-
+  store.subscribe();
   React.useEffect(() => {
     setData(usersData);
   }, []);
