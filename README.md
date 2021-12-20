@@ -39,9 +39,11 @@ the second argument is the **initial value of the state** (optional)
 
 the third argument is an enhancer where we can pass **middleware**, if any (optional)
 
+>  ES6 default parameter syntax for initializing the state parameter to value 0
 
-## ES6 default parameter syntax for initializing the state parameter to value 0
+>   subscribe function, we're registering a callback function that will be called once the store is changed
 
+>  inside the callback function, we're calling the store.getState method to get the current value of the state
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-t9wnlf)
 
