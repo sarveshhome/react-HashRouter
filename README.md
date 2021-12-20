@@ -31,12 +31,20 @@ return state;
 const store = createStore(reducer, 0);
 ```
 
-createStore function take three argument
+createStore function take three argument:-
+
 the first argument is a function that is normally known as a **reducer** (required)
 
 the second argument is the **initial value of the state** (optional)
 
 the third argument is an enhancer where we can pass **middleware**, if any (optional)
 
+
+## ES6 default parameter syntax for initializing the state parameter to value 0
+
+
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-t9wnlf)
-````
+
+```
+
+```
