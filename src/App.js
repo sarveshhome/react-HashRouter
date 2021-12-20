@@ -8,6 +8,7 @@ import {
   HashRouter,
   MemoryRouter,
 } from 'react-router-dom';
+import { createStore } from 'redux';
 import './style.css';
 import { Layout } from './pages/Layout';
 import Home from './pages/Home';
@@ -20,7 +21,7 @@ import User from './pages/Users.js';
 import store from './store/index.js';
 export default function App() {
   const [data, setData] = React.useState('data');
-  // store.subscribe();
+
   React.useEffect(() => {
     setData(usersData);
   }, []);
