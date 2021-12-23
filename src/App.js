@@ -19,6 +19,7 @@ import usersData from './Data.js';
 import UsersDetails from './pages/UsersDetails.js';
 import User from './pages/Users.js';
 import ValueStore from './pages/ReduxCall.js';
+import UseRefDemo from './pages/UseRefDemo.js';
 export default function App() {
   const [data, setData] = React.useState('data');
 
@@ -39,6 +40,7 @@ export default function App() {
             path="UsersDetails/:id"
             element={<UsersDetails data={data} />}
           />
+          <Route exact path="userefdemo" element={<UseRefDemo />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
