@@ -24,6 +24,9 @@ const Layout = () => {
           <li>
             <Link to="/userefdemo">UseRef demo</Link>
           </li>
+          <li>
+            <Link to="/APICalltest">APICall</Link>
+          </li>
         </ul>
       </nav>
 

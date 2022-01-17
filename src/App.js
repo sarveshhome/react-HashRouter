@@ -20,6 +20,7 @@ import UsersDetails from './pages/UsersDetails.js';
 import User from './pages/Users.js';
 import ValueStore from './pages/ReduxCall.js';
 import UseRefDemo from './pages/UseRefDemo.js';
+import { APICall } from './pages/APICall.js';
 export default function App() {
   const [data, setData] = React.useState('data');
 
@@ -40,6 +41,7 @@ export default function App() {
             path="UsersDetails/:id"
             element={<UsersDetails data={data} />}
           />
+          <Route path="APICalltest" element={<APICall />} />
           <Route exact path="userefdemo" element={<UseRefDemo />} />
           <Route path="*" element={<NoPage />} />
         </Route>
